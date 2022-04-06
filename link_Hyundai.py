@@ -7,4 +7,5 @@ result = requests.get(url = url)
 bs_obj = BeautifulSoup(result.content, "html.parser")
 div = bs_obj.find("div", {"class":"lnb_menu"})
 ul = div.find("ul", {"class":"lnb_list"})
-print(ul)
+for li in ul:
+    print(li)
